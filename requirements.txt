@@ -17,6 +17,7 @@ pyrogram==2.0.106
 python-dotenv
 python-telegram-bot==21.0.1
 pytube
+pyyaml==6.0.1
 py-tgcalls==0.9.7
 requests
 speedtest-cli
