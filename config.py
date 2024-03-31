@@ -29,7 +29,7 @@ OWNER_ID = int(getenv("OWNER_ID", 7157587567))
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/doraemon890/KISHU-X-MUSIC")
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", "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")
 
 # Support and contact information - Provide your own support channels
