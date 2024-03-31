@@ -1,69 +1,57 @@
 import re
 from os import getenv
-
 from dotenv import load_dotenv
 from pyrogram import filters
 
+# Load environment variables from .env file
 load_dotenv()
 
-# Get this value from my.telegram.org/apps
+# Telegram API credentials - Get these from the Telegram API website
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
-BOT_ID = "7080135405"
-# Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
-# Get your mongo url from cloud.mongodb.com
+# Specify where to get the following credentials
+OWNER_USERNAME = getenv("OWNER_USERNAME", "JARVIS_V2")
+BOT_USERNAME = getenv("BOT_USERNAME", "Kishu_X_Music_Bot")
+BOT_NAME = getenv("BOT_NAME", "˹𝙺ɪsʜᴜ ✘ 𝙼ᴜsɪᴄ˼")
+ASSUSERNAME = getenv("ASSUSERNAME", "Kishu_Assistant")
+EVALOP = list(map(int, getenv("EVALOP", "6797202080").split()))
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
-
-# Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", None))
-
-# Get this value from @FallenxBot on Telegram by /id
+LOGGER_ID = int(getenv("LOGGER_ID", -1002078835966))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
+# External APIs - Get these from their respective providers
+GPT_API = getenv("GPT_API")
+PLAYHT_API = getenv("PLAYHT_API")
 OWNER_ID = int(getenv("OWNER_ID", 7157587567))
 
-## Fill these variables if you're deploying on heroku.
-# Your heroku app name
+# Heroku deployment settings - Refer to Heroku documentation on how to obtain these
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-# Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/doraemon890/KISHU-X-MUSIC")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
+GIT_TOKEN = getenv("GIT_TOKEN", "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")
 
-UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO",
-    "https://github.com/doraemon890/KISHU-X-MUSIC",
-)
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
-GIT_TOKEN = getenv(
-    "GIT_TOKEN", "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"
-)  # Fill this variable if your upstream repository is private
-
+# Support and contact information - Provide your own support channels
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/JARVIS_X_SUPPORT")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/CHATTING_2024")
 
-# Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
-
-
-# Get this credentials from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
-
-
-# Maximum limit for fetching playlist's track from youtube, spotify, apple links.
+# Server limits and configurations - These can be set based on your server configurations
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "2500"))
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "9999999"))
 SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "9999999"))
 
-# Telegram audio and video file size limit (in bytes)
-TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 104857600))
-TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
-# Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
+# External service credentials - Obtain these from Spotify
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "22b6125bfe224587b722d6815002db2b")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "c9c63c6fbf2f467c8bc68624851e9773")
 
+# Telegram file size limits - Set these according to your requirements
+TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "5242880000"))
+TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
 
-# Get your pyrogram v2 session from @Strings_Gen_Robot on Telegram
+# Pyrogram session strings - You need to generate these yourself
 STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
