@@ -28,7 +28,7 @@ from config import BANNED_USERS, AMOP
 from strings import get_string
 
 ANNIE_VID = [
-    "https://github.com/doraemon890/KISHU-X-MUSIC/assets/155803358/775c214f-ed66-4be5-a587-f4c80d245a0f",
+    "https://github.com/JARVIS-V2/KISHU-X-MUSIC/assets/161505946/33a4ae64-d250-41bc-9c23-49862e6731e2",
 ]
 
 STICKERS = [
