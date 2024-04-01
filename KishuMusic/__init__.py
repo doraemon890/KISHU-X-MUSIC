@@ -4,6 +4,7 @@ from KishuMusic.core.git import git
 from KishuMusic.core.userbot import Userbot
 from KishuMusic.misc import dbb, heroku
 
+from SafoneAPI import SafoneAPI
 from .logging import LOGGER
 
 dirr()
@@ -12,6 +13,7 @@ dbb()
 heroku()
 
 app = Jarvis()
+api = SafoneAPI()
 userbot = Userbot()
 
 
