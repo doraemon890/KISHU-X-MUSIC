@@ -18,7 +18,7 @@ httpx==0.27.0
 motor 
 numpy
 opencv-python
-pillow==10.2.0
+pillow==10.3.0
 psutil
 pickledb
 pycryptodome
