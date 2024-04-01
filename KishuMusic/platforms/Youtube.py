@@ -2,6 +2,8 @@ import asyncio
 import os
 import re
 from typing import Union
+from pytgcalls.types.input_stream import InputStream
+from pytgcalls.types.input_stream import InputAudioStream
 
 import yt_dlp
 from pyrogram.enums import MessageEntityType
@@ -260,7 +262,7 @@ class YouTubeAPI:
 
         def video_dl():
             ydl_optssx = {
-                "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
+                "format": "bestvideo+bestaudio/best",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
