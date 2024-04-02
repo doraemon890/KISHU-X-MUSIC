@@ -13,7 +13,7 @@ MESSAGE = f"""๏ ᴛʜɪs ɪs ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇ ᴍᴜsɪᴄ ᴘʟ�
 
 ➥ sᴜᴘᴘᴏʀᴛᴇᴅ ᴘʟᴀᴛғᴏʀᴍs - sᴘᴏᴛɪғʏ, ʏᴏᴜᴛᴜʙᴇ, ʀᴇssᴏ, ᴀᴘᴘʟᴇ ᴍᴜsɪᴄ, sᴏɴɢ - ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ᴇᴛᴄ... 💕
 
-🔐ᴜꜱᴇ »  <a href={https://t.me/{app.username}?start=help}>/start</a> ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
+🔐ᴜꜱᴇ »  <a href={t.me/{app.username}}?start=help}>/start</a> ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
 
 ➲ ʙᴏᴛ : @{app.username}"""
 
