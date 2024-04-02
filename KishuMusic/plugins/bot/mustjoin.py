@@ -19,11 +19,11 @@ async def must_join_channel(app: Client, msg: Message):
             try:
                 await msg.reply_photo(
                     photo="https://telegra.ph/file/cd02e62dea09e7514c45f.jpg", 
-                    caption=f"๏ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ʏᴏᴜ'ᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ <a href={t.me/JARVIS_X_SUPPORT}>๏ sᴜᴘᴘᴏʀᴛ ๏</a> ʏᴇᴛ, ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴍᴇ ᴛʜᴇɴ ᴊᴏɪɴ <a href={t.me/JARVIS_X_SUPPORT}>๏ sᴜᴘᴘᴏʀᴛ ๏</a> ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ᴀɢᴀɪɴ ! ",
+                    caption=f"๏ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ʏᴏᴜ'ᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ <a href={link}>๏ sᴜᴘᴘᴏʀᴛ ๏</a> ʏᴇᴛ, ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴍᴇ ᴛʜᴇɴ ᴊᴏɪɴ <a href={link}>๏ sᴜᴘᴘᴏʀᴛ ๏</a> ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ᴀɢᴀɪɴ ! ",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("๏ Jᴏɪɴ ๏", url=https://t.me/JARVIS_X_SUPPORT),
+                                InlineKeyboardButton("๏ Jᴏɪɴ ๏", url=https://link),
                             ]
                         ]
                     )
