@@ -13,7 +13,7 @@ MESSAGE = """๏ ᴛʜɪs ɪs ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇ ᴍᴜsɪᴄ ᴘʟ�
 
 ➥ sᴜᴘᴘᴏʀᴛᴇᴅ ᴘʟᴀᴛғᴏʀᴍs - sᴘᴏᴛɪғʏ, ʏᴏᴜᴛᴜʙᴇ, ʀᴇssᴏ, ᴀᴘᴘʟᴇ ᴍᴜsɪᴄ, sᴏɴɢ - ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ᴇᴛᴄ... 💕
 
-🔐ᴜꜱᴇ »  <a href={https://t.me/Kishu_X_Music_Bot?start=help}>/start</a> ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
+🔐ᴜꜱᴇ »  <a href={t.me/Kishu_X_Music_Bot?start=help}>/start</a> ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
 
 ➲ ʙᴏᴛ : @Kishu_X_Music_Bot
 
