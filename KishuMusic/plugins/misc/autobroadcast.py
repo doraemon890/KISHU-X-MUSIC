@@ -15,7 +15,7 @@ MESSAGE = """๏ ᴛʜɪs ɪs ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇ ᴍᴜsɪᴄ ᴘʟ�
 
 🔐ᴜꜱᴇ »  <a href={t.me/{app.username}}?start=help}>/start</a> ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
 
-➲ ʙᴏᴛ : @{app.username}
+➲ ʙᴏᴛ : @Kishu_X_Music_Bot
 
 """
 
