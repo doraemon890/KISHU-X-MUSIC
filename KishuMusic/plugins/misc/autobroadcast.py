@@ -45,7 +45,7 @@ async def send_message_to_chats():
 async def continuous_broadcast():
     while True:
         await send_message_to_chats()
-        await asyncio.sleep(180000)  # Sleep (180000 seconds) between next broadcast
+        await asyncio.sleep(900000)  # Sleep (900000 seconds) between next broadcast
 
 # Start the continuous broadcast loop
 asyncio.create_task(continuous_broadcast())
