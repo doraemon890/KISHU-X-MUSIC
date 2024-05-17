@@ -13,7 +13,6 @@ dbb()
 heroku()
 
 app = Jarvis()
-bot = Jarvis()
 api = SafoneAPI()
 userbot = Userbot()
 
