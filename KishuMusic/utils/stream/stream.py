@@ -13,7 +13,7 @@ from KishuMusic.utils.exceptions import AssistantErr
 from KishuMusic.utils.inline import aq_markup, close_markup, stream_markup
 from KishuMusic.utils.pastebin import JarvisBin
 from KishuMusic.utils.stream.queue import put_queue, put_queue_index
-from KishuMusic.utils.thumbnails import get_thumb
+from KishuMusic.utils.thumbnails import gen_thumb, que_thumb
 
 
 async def stream(
@@ -98,7 +98,7 @@ async def stream(
                     "video" if video else "audio",
                     forceplay=forceplay,
                 )
-                img = await get_thumb(vidid)
+                img = await gen_thumb(vidid, user_id)
                 button = stream_markup(_, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
@@ -156,9 +156,11 @@ async def stream(
                 "video" if video else "audio",
             )
             position = len(db.get(chat_id)) - 1
+            qimg = await que_thumb(vidid, user_id)
             button = aq_markup(_, chat_id)
-            await app.send_message(
+            await app.send_photo(
                 chat_id=original_chat_id,
+                photo=qimg,
                 text=_["queue_4"].format(position, title[:27], duration_min, user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
@@ -184,7 +186,7 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await get_thumb(vidid)
+            img = await gen_thumb(vidid, user_id)
             button = stream_markup(_, chat_id)
             run = await app.send_photo(
                 original_chat_id,
@@ -322,8 +324,10 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             button = aq_markup(_, chat_id)
+            imgx = await que_thumb(vidid, user_id)
             await app.send_message(
                 chat_id=original_chat_id,
+                photo=imgx,
                 text=_["queue_4"].format(position, title[:27], duration_min, user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
@@ -352,7 +356,7 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await get_thumb(vidid)
+            img = await gen_thumb(vidid, user_id)
             button = stream_markup(_, chat_id)
             run = await app.send_photo(
                 original_chat_id,

@@ -9,7 +9,7 @@ from KishuMusic.utils.database import get_loop
 from KishuMusic.utils.decorators import AdminRightsCheck
 from KishuMusic.utils.inline import close_markup, stream_markup
 from KishuMusic.utils.stream.autoclear import auto_clean
-from KishuMusic.utils.thumbnails import get_thumb
+from KishuMusic.utils.thumbnails import gen_thumb
 from config import BANNED_USERS
 
 
@@ -115,7 +115,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             return await message.reply_text(_["call_6"])
         button = stream_markup(_, chat_id)
-        img = await get_thumb(videoid)
+        img = await gen_thumb(videoid, user_id)
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -148,7 +148,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             return await mystic.edit_text(_["call_6"])
         button = stream_markup(_, chat_id)
-        img = await get_thumb(videoid)
+        img = await gen_thumb(videoid, user_id)
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -217,7 +217,7 @@ async def skip(cli, message: Message, _, chat_id):
             db[chat_id][0]["markup"] = "tg"
         else:
             button = stream_markup(_, chat_id)
-            img = await get_thumb(videoid)
+            img = await gen_thumb(videoid, user_id)
             run = await message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
