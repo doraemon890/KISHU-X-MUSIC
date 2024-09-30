@@ -27,7 +27,7 @@ pyfiglet
 pykeyboard
 git+https://github.com/doraemon890/pyrogram
 python-dotenv
-python-telegram-bot==21.0.1
+python-telegram-bot==21.6
 pyshorteners
 pyttsx3
 pytz
